@@ -1,6 +1,6 @@
 ---
-import Container from "./Container.astro"
-
+import Container from "./Container.astro";
+const { title, tagline, link, label, one, two, three } = Astro.props;
 ---
 
 <div class="relative" id="home">
@@ -11,27 +11,27 @@ import Container from "./Container.astro"
     <Container>
         <div class="relative pt-36 ml-auto">
             <div class="lg:w-2/3 text-center mx-auto">
-                <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">hoocorp</h1>
-                <p class="mt-8 text-gray-700 dark:text-gray-300">We do so much that it's a struggle to put it into one paragraph.</p>
+                <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">{title}</h1>
+                <p class="mt-8 text-gray-700 dark:text-gray-300">{tagline}</p>
                 <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
                     <a
-                      href="#"
+                      href={link}
                       class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
                     >
                       <span class="relative text-base font-semibold text-white"
-                        >Subidiaries</span
+                        >{label}</span
                       >
                     </a>
                 </div>
                 <div class="hidden py-8 mt-16 border-y border-gray-100 dark:border-gray-800 sm:flex justify-between">
                     <div class="text-center">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Media</h6>
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">{one}</h6>
                     </div>
                     <div class="text-center">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Communication</h6>
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">{two}</h6>
                     </div>
                     <div class="text-center">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Life</h6>
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">{three}</h6>
                     </div>
                 </div>
             </div>
